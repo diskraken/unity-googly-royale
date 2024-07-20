@@ -10,15 +10,16 @@ public class ViewBase : MonoBehaviour, IView {
     [SerializeField] private string _showTrigger = "Show";
     [SerializeField] private string _hideTrigger = "Hide";
     [SerializeField] private string _hideNowTrigger = "HideNow";
-    //[SerializeField] private string _showNowTrigger = "ShowNow";
     private State _state;
 
     public virtual void Show() {
         SetState(State.ShowAnimation);
+        OnBeforeShow();
     }
 
     public virtual void Hide() {
         SetState(State.HideAnimation);
+        OnBeforeHide();
     }
 
     public virtual void Restart() {
@@ -30,9 +31,11 @@ public class ViewBase : MonoBehaviour, IView {
         switch (_state) {
             case State.HideAnimation:
                 SetState(State.Hidden);
+                OnAfterHide();
                 break;
             case State.ShowAnimation:
                 SetState(State.Shown);
+                OnAfterShow();
                 break;
         }
     }
@@ -63,6 +66,12 @@ public class ViewBase : MonoBehaviour, IView {
         _state = state;
         switch (state) {
 
+            case State.Shown:
+                if (stateLast == State.ShowAnimation) {
+                    _canvasGroup.blocksRaycasts = true;
+                }
+                break;
+
             case State.ShowAnimation:
                 if (stateLast == State.Shown) {
                     break;
@@ -74,10 +83,12 @@ public class ViewBase : MonoBehaviour, IView {
                 if (stateLast == State.Hidden) {
                     break;
                 }
+                _canvasGroup.blocksRaycasts = false;
                 _animator.SetTrigger(_hideTrigger);
                 break;
 
             case State.Restart:
+                _canvasGroup.blocksRaycasts = false;
                 _animator.SetTrigger(_hideNowTrigger);
                 SetState(State.Hidden);
                 OnRestart();
