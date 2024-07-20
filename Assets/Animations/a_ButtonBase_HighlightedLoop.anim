@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: p_Dice_HL_Loop
+  m_Name: a_ButtonBase_HighlightedLoop
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
