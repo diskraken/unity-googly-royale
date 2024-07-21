@@ -27,7 +27,7 @@ namespace kenneyjam2024 {
             if (choice == Choice.Miss) {
                 return;
             }
-            Debug.LogError($"Add Score {choice}");
+
             player.scores.Add(choice == Choice.Success);
             opponent.scores.Add(choice == Choice.Success);
         }
