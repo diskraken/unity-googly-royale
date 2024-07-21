@@ -265,11 +265,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1068001672}
   - component: {fileID: 1068001676}
+  - component: {fileID: 1068001677}
   - component: {fileID: 1068001675}
-  - component: {fileID: 1068001674}
   - component: {fileID: 1068001673}
   m_Layer: 5
-  m_Name: Viewport
+  m_Name: UIHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,36 +313,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
---- !u!114 &1068001674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068001671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.4117647}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1068001675
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -365,6 +335,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 3
   m_AspectRatio: 1.6
+--- !u!114 &1068001677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068001671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077db6698943ee944a20652e5776aaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuView: {fileID: 596606229}
+  _gameplayView: {fileID: 1115605938}
+  _scoresView: {fileID: 3301103197189427126}
 --- !u!224 &1115605935 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7220730178720517, guid: c712d8c01b9b2c94b99f95555e07bc0f, type: 3}
@@ -486,9 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ea4dc5d4a05114eb994f486f4332f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuView: {fileID: 596606229}
-  _gameplayView: {fileID: 1115605938}
-  _scoresView: {fileID: 3301103197189427126}
+  _uiHandler: {fileID: 1068001677}
   _gameConfig: {fileID: 11400000, guid: fed671edf12e7d447914a5fa40a8f54f, type: 2}
 --- !u!4 &1500994737
 Transform:

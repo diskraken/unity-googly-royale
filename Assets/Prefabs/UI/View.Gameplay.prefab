@@ -214,25 +214,27 @@ MonoBehaviour:
   _showTrigger: Show
   _hideTrigger: Hide
   _hideNowTrigger: HideNow
-  dicePrefab: {fileID: 7686297200072522580, guid: 16022227912cb09458f4a4a779844afb, type: 3}
-  playerHand: {fileID: 7220730962866036}
-  enemyHand: {fileID: 8355174075942981940}
-  playerChoice: {fileID: 4360400101242313982}
-  enemyChoice: {fileID: 7299175850803822683}
-  playerDice:
+  _dicePrefab: {fileID: 7686297200072522580, guid: 16022227912cb09458f4a4a779844afb, type: 3}
+  _playerHand: {fileID: 7220730962866036}
+  _enemyHand: {fileID: 8355174075942981940}
+  _playerChoice: {fileID: 4360400101242313982}
+  _enemyChoice: {fileID: 7299175850803822683}
+  _playerDice:
   - {fileID: 2268648404688916658}
   - {fileID: 1232210235203573606}
   - {fileID: 2061783620621191982}
   - {fileID: 6524585325756160400}
   - {fileID: 8318930662049988271}
   - {fileID: 8924765965317327014}
-  enemyDice:
+  _enemyDice:
   - {fileID: 9106760875271332256}
   - {fileID: 4221592531704760493}
   - {fileID: 7278915937520153555}
   - {fileID: 3404353517204547742}
   - {fileID: 2883941871704030570}
   - {fileID: 1528757588722400133}
+  _faceHandlerPlayer: {fileID: 3425188646578838663}
+  _faceHandlerEnemy: {fileID: 6701028022702164206}
 --- !u!225 &7220730178720539
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1713,6 +1715,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72084c024a7cc774193adc2e24d124dc, type: 3}
+--- !u!114 &3425188646578838663 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969572973633361471, guid: 72084c024a7cc774193adc2e24d124dc, type: 3}
+  m_PrefabInstance: {fileID: 2520937817840028344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ba1e8194b05814cbe3c62821edb62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5212647168823475477 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7686273944430524333, guid: 72084c024a7cc774193adc2e24d124dc, type: 3}
@@ -2498,6 +2511,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7686273944430524333, guid: 72084c024a7cc774193adc2e24d124dc, type: 3}
   m_PrefabInstance: {fileID: 5875587829469650641}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6701028022702164206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 969572973633361471, guid: 72084c024a7cc774193adc2e24d124dc, type: 3}
+  m_PrefabInstance: {fileID: 5875587829469650641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ba1e8194b05814cbe3c62821edb62f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7530397299223590109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2508,6 +2532,10 @@ PrefabInstance:
     - target: {fileID: 991075015306647682, guid: 11445cc77e1108f458b913b403ec90a3, type: 3}
       propertyPath: m_Name
       value: Button.Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 991075015306647682, guid: 11445cc77e1108f458b913b403ec90a3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1155705973609413458, guid: 11445cc77e1108f458b913b403ec90a3, type: 3}
       propertyPath: m_Pivot.x

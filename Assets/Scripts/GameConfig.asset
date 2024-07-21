@@ -15,9 +15,12 @@ MonoBehaviour:
   handSize: 6
   playersMax: 15
   warmupRounds: 3
-  aiSmartRatio: 50
+  aiSmartRatio: 75
   diceColorSuccess: {r: 0.6274475, g: 0.9433962, b: 0.71981233, a: 1}
   diceColorFailure: {r: 0.92549026, g: 0.76470596, b: 0.76470596, a: 1}
+  scoreColorSuccess: {r: 0.4669811, g: 1, b: 0.4857935, a: 1}
+  scoreColorFailure: {r: 0.9622642, g: 0.6036846, b: 0.6036846, a: 1}
+  scoreColorEmpty: {r: 0.5289675, g: 0.47058564, b: 0.7075472, a: 1}
   playerCharacterColor: {r: 1, g: 0.7294118, b: 0.41960788, a: 1}
   playerColors:
   - {r: 1, g: 0.5328714, b: 0.41960788, a: 1}
