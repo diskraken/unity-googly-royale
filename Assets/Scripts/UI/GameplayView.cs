@@ -89,9 +89,7 @@ namespace kenneyjam2024 {
         }
 
         private void OnChoiceIncorrect() {
-            // TODO: 
-            // - add sfx
-            // - add fx lite
+            GameManager.Instance.PlayAudioClip(Clip.loseAudioClip);
         }
 
         private void OnDuelWin() {

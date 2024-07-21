@@ -27,6 +27,7 @@ namespace kenneyjam2024 {
         }
 
         public void OnClick() {
+            GameManager.Instance.PlayAudioClip(Clip.onclickAudioClip);
             GameManager.Instance.DiceButtonOnClick(_id);
             Hide();
         }

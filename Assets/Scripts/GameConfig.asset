@@ -38,3 +38,9 @@ MonoBehaviour:
   - {r: 0.6030678, g: 1, b: 0.41960788, a: 1}
   - {r: 0.83976847, g: 1, b: 0.41960788, a: 1}
   - {r: 0.99111927, g: 1, b: 0.41960788, a: 1}
+  bgmClip: {fileID: 8300000, guid: 30a0b560501f2dd4bbb6e7e511da28af, type: 3}
+  deathAudioClip: {fileID: 8300000, guid: 0ea11973f3a800145a18bcb597651a94, type: 3}
+  onclickAudioClip: {fileID: 8300000, guid: 8574c119a3b615f45a992128966a4bea, type: 3}
+  scoreShowAudioClip: {fileID: 8300000, guid: 3e4d506ad9a6a5c4191e5730b92e3ca2, type: 3}
+  winAudioClip: {fileID: 8300000, guid: 58ee0ff072212a849853664163d8920d, type: 3}
+  loseAudioClip: {fileID: 8300000, guid: c4c3fff7073dd7f4b929a1f5c3c4be3a, type: 3}

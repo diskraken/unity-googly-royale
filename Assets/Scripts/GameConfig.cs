@@ -25,5 +25,14 @@ namespace kenneyjam2024 {
         public Color playerCharacterColor = Color.white;
         public List<Color> playerColors = new List<Color>();
 
+        [Header("Audio")]
+        public AudioClip bgmClip;
+        public AudioClip deathAudioClip;
+        public AudioClip onclickAudioClip;
+        public AudioClip scoreShowAudioClip;
+
+        public AudioClip winAudioClip;
+        public AudioClip loseAudioClip;
+
     }
 }

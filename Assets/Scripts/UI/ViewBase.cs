@@ -19,6 +19,9 @@ namespace kenneyjam2024 {
         }
 
         public virtual void Hide() {
+            if (_state == State.Invalid) {
+                return;
+            }
             SetState(State.HideAnimation);
             OnBeforeHide();
         }
@@ -42,8 +45,8 @@ namespace kenneyjam2024 {
         }
 
         private void Awake() {
-            _state = State.Invalid;
-            SetState(State.Restart);
+            _state = State.Hidden;
+            //SetState(State.Restart);
             OnAwake();
         }
 
@@ -63,7 +66,7 @@ namespace kenneyjam2024 {
                 return;
             }
 
-            //Debug.Log($"{name}.State = {state}");
+            Debug.Log($"{name}.State = {state}");
             _state = state;
             switch (state) {
 

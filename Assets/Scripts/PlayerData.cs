@@ -10,6 +10,8 @@ namespace kenneyjam2024 {
         public List<bool> scores = new List<bool>();
         public int Wins => scores.Count(e => e);
         public Color color;
+        public bool dead = false;
+
         public PlayerData(Color color) {
             this.color = color;
         }

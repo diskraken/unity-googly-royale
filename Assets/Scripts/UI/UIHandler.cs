@@ -19,7 +19,10 @@ namespace kenneyjam2024 {
                 case GameState.ScoreShow:
                     _scoresView.Show();
                     break;
+                case GameState.Win:
+                case GameState.Lose:
                 case GameState.Menu:
+                    _menuView.InitWithState(gameState);
                     _menuView.Show();
                     break;
             }
